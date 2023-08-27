@@ -25,8 +25,6 @@ function validAnagram(str1, str2) {
       ? (frequencyCounter2[char] += 1)
       : (frequencyCounter2[char] = 1);
   }
-    console.log({ frequencyCounter1 });
-    console.log({ frequencyCounter2 });
   for (const key in frequencyCounter1) {
     if (!(key in frequencyCounter2)) {
       //   console.log(`${key} is not in frequencyCounter2`);
