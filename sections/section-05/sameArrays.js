@@ -34,16 +34,15 @@ function same2(arr1, arr2) {
   const frequencyCounter1 = {};
   const frequencyCounter2 = {};
 
-  for (const char of str1) {
-    frequencyCounter1[char]
-      ? (frequencyCounter1[char] += 1)
-      : (frequencyCounter1[char] = 1);
+  for (const val of arr1) {
+    frequencyCounter1[val]
+      ? (frequencyCounter1[val] += 1)
+      : (frequencyCounter1[val] = 1);
   }
-
-  for (const char of str2) {
-    frequencyCounter2[char]
-      ? (frequencyCounter2[char] += 1)
-      : (frequencyCounter2[char] = 1);
+  for (const val of arr2) {
+    frequencyCounter2[val]
+      ? (frequencyCounter2[val] += 1)
+      : (frequencyCounter2[val] = 1);
   }
 
   console.log({ frequencyCounter1 });
