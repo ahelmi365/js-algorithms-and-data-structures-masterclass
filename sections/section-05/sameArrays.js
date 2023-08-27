@@ -1,8 +1,7 @@
-// create a function to compare 2 arrays 
-// return ture if both arrays have the same length 
+// create a function to compare 2 arrays
+// return ture if both arrays have the same length
 // AND
 // array2 has square values of all values in array1
-
 
 // solution 1 ---> nested loop ---> O(n2)
 
@@ -25,8 +24,6 @@ function same(arr1, arr2) {
 
 // console.log(same([1, 2, 3, 2], [4, 9, 1, 4]));
 
-
-
 // solution 2 >> using frequancy counter pattern ---> O(n)
 function same2(arr1, arr2) {
   // check if both length are equals
@@ -37,11 +34,16 @@ function same2(arr1, arr2) {
   const frequencyCounter1 = {};
   const frequencyCounter2 = {};
 
-  for (const val of arr1) {
-    frequencyCounter1[val] = (frequencyCounter1[val] || 0) + 1;
+  for (const char of str1) {
+    frequencyCounter1[char]
+      ? (frequencyCounter1[char] += 1)
+      : (frequencyCounter1[char] = 1);
   }
-  for (const val of arr2) {
-    frequencyCounter2[val] = (frequencyCounter2[val] || 0) + 1;
+
+  for (const char of str2) {
+    frequencyCounter2[char]
+      ? (frequencyCounter2[char] += 1)
+      : (frequencyCounter2[char] = 1);
   }
 
   console.log({ frequencyCounter1 });
